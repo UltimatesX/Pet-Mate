@@ -1,68 +1,178 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* src/index.css */
+.hero {
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.navbar-custom {
+  background-color: #0d6efd;
 }
-a:hover {
-  color: #535bf2;
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white !important;
+}
+.hero h1,p{
+  color: black;
+}
+/* Hero Section */
+.hero-section {
+  background-image: url('/image.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Hero content box */
+.overlay-box {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+   
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  width: 85%;
+  max-width: 900px;
+   
+}
+
+/* Navbar styles */
+.navbar-custom {
+  background-color: #0d6efd;
+ 
+  transition: background-color 0.4s ease;
+}
+
+.navbar-transparent {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Hide scrollbar */
+ 
+
+.navbar{
+  background-color: hsl(40, 100%, 58%);
+  
 }
 
 body {
-  margin: 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.card:hover{
+  transform: scale(1.1);
+
+}
+ 
+.card{
+  width:30vw;
+}
+nav img{
+  height: 40px;
+}
+footer img{
+  height: 60px;
+}
+.footcon img{
+  align-self: center;
+
+}
+.footcon{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+footer> p{
+  text-align: center;
+  margin-bottom: 0;
+  color: white;
 }
+.footcon p{
+  color: white;
+}
+footer h5{
+  color: black;
+}
+.ali{
+  color: black;
+ }
+ .colo{
+  background-color: hsl(40, 100%, 58%);;
+ }
+ .footlink{
+  color:white;
+  text-decoration: none;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+ }
+ .carddiv{
+  margin-top: 110px;
+  margin-bottom: 40px;
+ }
+ .dog-card {
+  width: 280px;
+  background-color: white;
+  border-radius: 15px;
+  transition: transform 0.3s, opacity 0.3s;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  position: relative;
+  padding: 15px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.dog-card-center {
+  transform: scale(1.1);
+  z-index: 2;
 }
+
+.dog-card-left,
+.dog-card-right {
+  transform: scale(0.9);
+  z-index: 1;
+}
+
+.inactive-card {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(40%);
+}
+
+.active-card {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Circular button style */
+.circle-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.circle-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.explore-overlay {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #007bff;
+}
+ 
